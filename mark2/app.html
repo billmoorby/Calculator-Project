@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device_width, initial_scale=1.0">
+    <link rel="stylesheet" href="delete.css">
+  </head>
+
+  <body>
+    <div class="calculator_container">
+
+      <p class="js_calculation calculation_display"></p>
+
+      <div class="button_row">
+        <button onclick="
+          update_calculation('1');
+        " class="calculator_button gray_button">
+          1
+        </button>
+
+        <button onclick="
+          update_calculation('2');
+        " class="calculator_button gray_button">
+          2
+        </button>
+
+        <button onclick="
+          update_calculation('3');
+        " class="calculator_button gray_button">
+          3
+        </button>
+
+        <button onclick="
+          update_calculation('+');
+        " class="calculator_button orange_button">
+          +
+        </button>
+      </div>
+
+      <div class="button_row">
+        <button onclick="
+          update_calculation('4');
+        " class="calculator_button gray_button">
+          4
+        </button>
+
+        <button onclick="
+          update_calculation('5');
+        " class="calculator_button gray_button">
+          5
+        </button>
+
+        <button onclick="
+          update_calculation('6');
+        " class="calculator_button gray_button">
+          6
+        </button>
+
+        <button onclick="
+          update_calculation('-');
+        " class="calculator_button orange_button">
+          -
+        </button>
+      </div>
+
+      <div class="button_row">
+        <button onclick="
+          update_calculation('7');
+        " class="calculator_button gray_button">
+          7
+        </button>
+
+        <button onclick="
+          update_calculation('8');
+        " class="calculator_button gray_button">
+          8
+        </button>
+
+        <button onclick="
+          update_calculation('9');
+        " class="calculator_button gray_button">
+          9
+        </button>
+
+        <button onclick="
+          update_calculation('*');
+        " class="calculator_button orange_button">
+          *
+        </button>
+      </div>
+
+      <div class="button_row">
+        <button onclick="
+          update_calculation('0');
+        " class="calculator_button gray_button">
+          0
+        </button>
+
+        <button onclick="
+          update_calculation('.');
+        " class="calculator_button gray_button">
+          .
+        </button>
+
+        <button onclick="
+          calculation = eval(calculation);
+          display_calculation();
+
+          localStorage.setItem('calculation', calculation);
+        " class="calculator_button gray_button">
+          =
+        </button>
+
+        <button onclick="
+          update_calculation('/');
+        " class="calculator_button orange_button">
+          /
+        </button>
+      </div>
+      
+      <p>
+        <button onclick="
+          calculation = '';
+          display_calculation();
+
+          localStorage.setItem(('calculation', calculation));
+        " class="calculator_button gray_button clear_button">
+          Clear
+        </button>
+      </p>
+
+    </div>
+
+    <script src="delete.js"></script>
+  </body>
+</html>
